@@ -181,43 +181,63 @@
   </div>
 </template>
 
+
 <script>
 
 
 
+
+{/* 1. Тернарный оператор */}
+
 var fireballSize = 22;
-var getFireballSpeed = fuction(left){
-    
-    if(left === true){
-      return (getFireballSpeed = 5);
-    }else{
-      return (getFireballSpeed = 2);
-    }
-  }
+var fireballSpeed = 0;
+
+var getFireballSpeed = function(left){
+  fireballSpeed = ((left === true) ? 5 : 2);
+  return fireballSpeed;
+}
+getFireballSpeed();
+
+{/*  1? Получается что параметр может быть только left?
+     2? Всегда возвращает значение 2, что то пошло не так  
+*/}
+
+
+
+{/* 2. Функция возвращает умножение переменной и пропорции */}
 
 var wizardSpeed = 3;
 var wizardWidth = 70;
 
 var getWizardHeight = funсtion(){
-  var proportion = 1.337;
-  return wizardWidth * proportion;
-  console.log('Высота мага: ' + getWizardHeight);
+  return wizardWidth * 1.337;
 }
-getWizardHeight();
+{/*  не работает */}
 
 
-funсtion getWizardX (width){
-  var x = width / 2;
-  return x;
+
+
+{/* 3. Центр волшебника
+
+узнать getWizardX 
+известна ширина поля width
+
+1. чтобы получить центр ширины поля, делим ширину на 2
+2. чтобы узнать центр волшебника вычитаем половину ширины волшебника */}
+
+funсtion getWizardX(width){
+  return (width / 2) - (wizardWidth / 2);
 }
 getWizardX(12);
 
-
 funсtion getWizardY (height){
-  var y = (height / 3) * 2;
-  return y;
+  return (height / 3) * 2 - (getWizardHeight / 2);
 }
 getWizardY(12);
+
+{/* не работает */}
+
+
 
 </script>
 
