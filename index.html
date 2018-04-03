@@ -183,60 +183,28 @@
 
 
 <script>
-
-
-
-
-{/* 1. Тернарный оператор */}
-
 var fireballSize = 22;
 var fireballSpeed = 0;
 
-var getFireballSpeed = function(left){
-  fireballSpeed = ((left === true) ? 5 : 2);
-  return fireballSpeed;
+function getFireballSpeed(left){
+  return left ? 5 : 2;
 }
-getFireballSpeed();
-
-{/*  1? Получается что параметр может быть только left?
-     2? Всегда возвращает значение 2, что то пошло не так  
-*/}
-
-
-
-{/* 2. Функция возвращает умножение переменной и пропорции */}
 
 var wizardSpeed = 3;
 var wizardWidth = 70;
 
-var getWizardHeight = funсtion(){
+function getWizardHeight(){
   return wizardWidth * 1.337;
 }
-{/*  не работает */}
 
 
-
-
-{/* 3. Центр волшебника
-
-узнать getWizardX 
-известна ширина поля width
-
-1. чтобы получить центр ширины поля, делим ширину на 2
-2. чтобы узнать центр волшебника вычитаем половину ширины волшебника */}
-
-funсtion getWizardX(width){
+function getWizardX(width){
   return (width / 2) - (wizardWidth / 2);
 }
-getWizardX(12);
 
-funсtion getWizardY (height){
-  return (height / 3) * 2 - (getWizardHeight / 2);
+function getWizardY(height){}
+return (height / 2) * 3 - (getWizardHeight / 2);
 }
-getWizardY(12);
-
-{/* не работает */}
-
 
 
 </script>
